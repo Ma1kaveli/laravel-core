@@ -407,7 +407,7 @@ abstract class BaseRepository
      */
     public function getPaginatedList(mixed $dto): LengthAwarePaginator
     {
-        return $this->query()->filter($dto->params)->list();
+        return $this->modelClass::filter($dto->params)->list();
     }
 
     /**
